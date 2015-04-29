@@ -1,0 +1,36 @@
+{
+  "name": "object-to-firebase",
+  "version": "1.0.0",
+  "description": "Recursively transform an object to its Firebase representation",
+  "main": "./src",
+  "scripts": {
+    "test": "babel-tape-runner test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bendrucker/object-to-firebase.git"
+  },
+  "keywords": [
+    "firebase",
+    "object",
+    "recursive",
+    "transform",
+    "value",
+    "cast"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/object-to-firebase/issues"
+  },
+  "homepage": "https://github.com/bendrucker/object-to-firebase#readme",
+  "dependencies": {
+    "babel-runtime": "~5.1.13",
+    "map-obj": "~1.0.0"
+  },
+  "devDependencies": {
+    "babel": "~5.1.13",
+    "babel-tape-runner": "~1.1.0",
+    "tape": "~4.0.0"
+  }
+}
