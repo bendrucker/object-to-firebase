@@ -26,7 +26,8 @@
   "homepage": "https://github.com/bendrucker/object-to-firebase#readme",
   "dependencies": {
     "babel-runtime": "~5.1.13",
-    "map-obj": "~1.0.0"
+    "traverse": "~0.6.6",
+    "value-to-firebase": "~1.0.1"
   },
   "devDependencies": {
     "babel": "~5.1.13",
