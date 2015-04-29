@@ -4,31 +4,15 @@ import valueToFirebase from 'value-to-firebase'
 import traverse from 'traverse'
 
 export default function objectToFirebase (object) {
-  object = valueToFirebase(object)
-  if (!object) return object
-  return transform(object)
+  return traverse(object).map(function () {
+    process.call(this)
+    this.post(process)
+  })
 }
 
-function transform (object) {
-  let dirty = false
-  function cast (object) {
-    return traverse(object).forEach(function (node) {
-      if (this.isRoot) {
-        return
-      }
-      let value = valueToFirebase(node)
-      if (value === null) {
-        this.remove()
-        dirty = true
-      } else {
-        this.update(value)
-      }
-    })
-  }
-  object = cast(object)
-  while (dirty) {
-    dirty = false
-    cast(object)
-  }
-  return valueToFirebase(object)
+function process () {
+  const value = valueToFirebase(this.node)
+  if (this.isRoot) return this.update(value)
+  if (value === null) return this.remove()
+  return this.update(value)
 }

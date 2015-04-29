@@ -5,7 +5,9 @@ import toFirebase from '../'
 
 test((t) => {
   t.equal(toFirebase({}), null)
-  t.deepEqual(toFirebase({foo: 'bar'}), {foo: 'bar'})
+  const shallow = {foo: 'bar'}
+  t.deepEqual(toFirebase(shallow), {foo: 'bar'})
+  t.notEqual(toFirebase(shallow), shallow, 'copies shallow object')
   t.deepEqual(toFirebase({
     foo: {
       bar: 'baz'
@@ -17,8 +19,32 @@ test((t) => {
   })
   t.equal(toFirebase({
     foo: {
-      bar: new Date()
+      bar: {
+        baz: null
+      },
+      baz: {
+        qux: null
+      }
     }
   }), null)
+  const deep = {
+    foo: {
+      bar: {
+        baz: new Date()
+      },
+    }
+  }
+  t.equal(toFirebase(deep), null)
+  t.ok(deep.foo, 'copies deep object')
+  t.deepEqual(toFirebase({
+    foo: {
+      bar: null,
+      baz: 'qux'
+    }
+  }), {
+    foo: {
+      baz: 'qux'
+    }
+  })
   t.end()  
 })
