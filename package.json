@@ -4,7 +4,8 @@
   "description": "Recursively transform an object to its Firebase representation",
   "main": "./src",
   "scripts": {
-    "test": "babel-tape-runner test/*.js"
+    "test": "babel-tape-runner test/*.js",
+    "build": "babel ./src -d ./lib --optional runtime"
   },
   "repository": {
     "type": "git",
