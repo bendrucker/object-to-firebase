@@ -46,5 +46,10 @@ test((t) => {
       baz: 'qux'
     }
   })
+  t.equal(toFirebase({
+    foo: {
+      bar: [null],
+    }
+  }), null)
   t.end()  
 })
