@@ -1,6 +1,6 @@
 {
   "name": "object-to-firebase",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Recursively transform an object to its Firebase representation",
   "main": "./src",
   "scripts": {
