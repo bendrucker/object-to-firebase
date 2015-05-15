@@ -1,6 +1,6 @@
 'use strict'
 
-import valueToFirebase from 'value-to-firebase'
+import {default as valueToFirebase, sv} from 'value-to-firebase'
 import traverse from 'traverse'
 
 export default function objectToFirebase (object) {
@@ -9,6 +9,8 @@ export default function objectToFirebase (object) {
     this.post(process)
   })
 }
+
+objectToFirebase.sv = sv
 
 function process () {
   const value = valueToFirebase(this.node)

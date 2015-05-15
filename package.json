@@ -28,7 +28,7 @@
   "dependencies": {
     "babel-runtime": "~5.1.13",
     "traverse": "~0.6.6",
-    "value-to-firebase": "~1.0.1"
+    "value-to-firebase": "~1.1.0"
   },
   "devDependencies": {
     "babel": "~5.1.13",
