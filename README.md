@@ -8,6 +8,18 @@
 $ npm install object-to-firebase
 ```
 
+## Usage
+
+```js
+var objectToFirebase = require('object-to-firebase')
+objectToFirebase({
+  foo: {
+    bar: null
+  }
+})
+// => null
+```
+
 ## API
 
 ##### `objectToFirebase(object)` -> `object` / `null`
