@@ -1,11 +1,11 @@
 'use strict'
 
-import test from 'tape'
-import toFirebase from '../'
+var test = require('tape')
+var toFirebase = require('./')
 
-test((t) => {
+test(function (t) {
   t.equal(toFirebase({}), null)
-  const shallow = {foo: 'bar'}
+  var shallow = {foo: 'bar'}
   t.deepEqual(toFirebase(shallow), {foo: 'bar'})
   t.notEqual(toFirebase(shallow), shallow, 'copies shallow object')
   t.deepEqual(toFirebase({
@@ -27,11 +27,11 @@ test((t) => {
       }
     }
   }), null)
-  const deep = {
+  var deep = {
     foo: {
       bar: {
         baz: new Date()
-      },
+      }
     }
   }
   t.equal(toFirebase(deep), null)
@@ -48,8 +48,8 @@ test((t) => {
   })
   t.equal(toFirebase({
     foo: {
-      bar: [null],
+      bar: [null]
     }
   }), null)
-  t.end()  
+  t.end()
 })

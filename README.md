@@ -1,7 +1,8 @@
 # object-to-firebase [![Build Status](https://travis-ci.org/bendrucker/object-to-firebase.svg?branch=master)](https://travis-ci.org/bendrucker/object-to-firebase)
-Recursively transform an object to its Firebase representation
 
-## Installing
+> Recursively transform an object to its Firebase representation
+
+## Install
 
 ```sh
 $ npm install object-to-firebase
@@ -9,7 +10,12 @@ $ npm install object-to-firebase
 
 ## API
 
-##### `objectToFirebase(object)` -> `Object` / `null`
+##### `objectToFirebase(object)` -> `object` / `null`
+
+#### object
+
+*Required*  
+Type: `object`
 
 Traverses an `object`, converting values with [value-to-firebase](https://github.com/bendrucker/value-to-firebase). The object is copied into its smallest possible Firebase representation, meaning:
 
