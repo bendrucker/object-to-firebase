@@ -1,4 +1,4 @@
-# object-to-firebase [![Build Status](https://travis-ci.org/bendrucker/object-to-firebase.svg?branch=master)](https://travis-ci.org/bendrucker/object-to-firebase)
+# object-to-firebase [![Build Status](https://travis-ci.org/bendrucker/object-to-firebase.svg?branch=master)](https://travis-ci.org/bendrucker/object-to-firebase) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/object-to-firebase.svg)](https://greenkeeper.io/)
 
 > Recursively transform an object to its Firebase representation
 
