@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "standard": "~12.0.1",
-    "tape": "~4.9.1"
+    "tape": "~4.10.0"
   },
   "files": [
     "index.js",
